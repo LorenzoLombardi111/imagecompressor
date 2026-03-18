@@ -24,3 +24,12 @@ Images never leave the user's device. Zero server uploads, zero analytics, zero 
 ## Technology
 
 Single-page static HTML/CSS/JS application. No frameworks, no build step, no backend.
+
+## Pages
+
+- [Home](https://freeimagecompressor.app/)
+- [vs TinyPNG](https://freeimagecompressor.app/vs-tinypng.html)
+- [vs Squoosh](https://freeimagecompressor.app/vs-squoosh.html)
+- [Compress JPG Online](https://freeimagecompressor.app/compress-jpg-online.html)
+- [Compress PNG Online](https://freeimagecompressor.app/compress-png-online.html)
+- [Image Compressor for Web](https://freeimagecompressor.app/image-compressor-for-web.html)

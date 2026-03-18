@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free PNG Compressor Online — No Upload Required | freeimagecompressor.app</title>
+<meta name="description" content="Compress PNG images free online. Reduce PNG file size in your browser with no upload. Convert PNG to WebP or JPG for smaller files.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://freeimagecompressor.app/compress-png-online.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeimagecompressor.app/compress-png-online.html">
+<meta property="og:title" content="Free PNG Compressor Online — No Upload Required">
+<meta property="og:description" content="Compress PNG images free online. Reduce file size in your browser. Convert to WebP or JPG.">
+<meta property="og:image" content="https://freeimagecompressor.app/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free PNG Compressor Online — No Upload Required">
+<meta name="twitter:description" content="Compress PNG images free online. Reduce file size in your browser. Convert to WebP or JPG.">
+<meta name="twitter:image" content="https://freeimagecompressor.app/og-image.svg">
+<meta name="theme-color" content="#C49A2A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can PNGs be compressed without losing quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but with limited results. PNG is a lossless format, so lossless compression tools can reduce file size somewhat by optimizing the encoding without discarding any pixel data. However, the gains are typically modest (5-20%). For dramatic size reduction, you need lossy PNG compression (like TinyPNG's pngquant approach) or conversion to JPG/WebP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I convert PNG to JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends. Convert to JPG if your image is a photograph or does not require transparency — JPG files are typically 50-80% smaller than equivalent PNGs. Keep PNG if you need transparency (logos, icons, overlays) or if the image has sharp text/lines that would suffer from JPG compression artifacts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are PNG files so large?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG uses lossless compression, which preserves every single pixel exactly as it is. This means no visual quality is lost, but the tradeoff is larger file sizes. A photograph saved as PNG can be 5-10x larger than the same image saved as JPG at 80% quality. PNG is designed for images where exact pixel reproduction matters — screenshots, graphics with text, logos, and images requiring transparency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does freeimagecompressor.app support PNG transparency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When you keep the output format as PNG, transparency is preserved through the Canvas API. If you convert a PNG to JPG, transparency is lost because JPG does not support alpha channels — transparent areas will become white. Converting to WebP preserves transparency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best way to reduce PNG file size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most effective approach is converting to WebP, which supports both lossy and lossless compression and typically produces files 25-35% smaller than PNG. If you must keep PNG format, try reducing image dimensions with freeimagecompressor.app's resize option. For lossy PNG compression with the best results, server-side tools like TinyPNG use specialized algorithms that outperform browser-based approaches."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#faf9f6;--surface:#f4f2ee;--border:#e8e4dd;--text-primary:#1a1917;--text-secondary:#6b6760;--text-muted:#9e9b96;--accent:#C49A2A;--accent-hover:#A8831F;--accent-text:#ffffff;--destructive:#c0392b;--shadow:0 1px 3px rgba(0,0,0,0.06),0 2px 8px rgba(0,0,0,0.04);--success:#27ae60;
+}
+html.dark{
+--bg:#141412;--surface:#1e1c1a;--border:#2e2b27;--text-primary:#f0ede8;--text-secondary:#9e9b96;--text-muted:#6b6760;--accent:#D4A835;--accent-hover:#C49A2A;--accent-text:#ffffff;--shadow:0 1px 3px rgba(0,0,0,0.3),0 2px 8px rgba(0,0,0,0.2);--success:#2ecc71;
+}
+html{font-size:15px;line-height:1.6}
+body{font-family:'Lora',serif;background:var(--bg);color:var(--text-primary);transition:background 0.15s ease,color 0.15s ease}
+button,input,select,label{font-family:'DM Sans',sans-serif}
+.header{height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid var(--border);background:var(--bg)}
+.brand{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;color:var(--accent);text-decoration:none}
+.header-actions{display:flex;align-items:center;gap:12px}
+.theme-toggle{width:44px;height:26px;border-radius:13px;background:var(--border);position:relative;display:flex;align-items:center;padding:0 3px;cursor:pointer;border:none;transition:background 0.15s ease}
+html.dark .theme-toggle{background:var(--accent)}
+.theme-toggle-knob{width:20px;height:20px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;transition:transform 0.15s ease}
+html.dark .theme-toggle-knob{transform:translateX(18px)}
+.theme-toggle-knob svg{width:14px;height:14px;color:var(--text-muted)}
+html.dark .theme-toggle-knob svg{color:var(--accent)}
+.content{max-width:720px;margin:0 auto;padding:48px 24px 64px}
+.content h1{font-family:'DM Sans',sans-serif;font-size:28px;font-weight:700;margin-bottom:24px;line-height:1.3}
+.content h2{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:600;margin-top:48px;margin-bottom:16px}
+.content p{margin-bottom:16px;font-size:15px;color:var(--text-secondary);line-height:1.7}
+.content strong{color:var(--text-primary);font-weight:600}
+.content a{color:var(--accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content ul{margin:0 0 16px 24px;color:var(--text-secondary)}
+.content li{margin-bottom:8px;font-size:15px;line-height:1.7}
+.cta{display:inline-block;background:var(--accent);color:var(--accent-text);padding:12px 32px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;text-decoration:none;transition:background 0.15s ease;margin:24px 0}
+.cta:hover{background:var(--accent-hover);text-decoration:none}
+details{margin-bottom:12px;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+summary{padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;background:var(--surface);color:var(--text-primary)}
+details p{padding:12px 16px;margin:0;font-size:14px}
+.tip-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:24px 0;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-secondary)}
+.tip-box strong{color:var(--text-primary)}
+.related{margin-top:48px;padding-top:24px;border-top:1px solid var(--border)}
+.related h2{font-size:16px;margin-top:0;margin-bottom:12px}
+.related-links{display:flex;flex-wrap:wrap;gap:8px}
+.related-links a{display:inline-block;padding:6px 12px;border:1px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:all 0.15s ease}
+.related-links a:hover{border-color:var(--accent);color:var(--accent)}
+.attribution{font-family:'DM Sans',sans-serif;font-size:11px;color:var(--text-muted);text-align:center;padding:24px;margin-top:48px;border-top:1px solid var(--border)}
+@media(max-width:768px){.content{padding:32px 16px 48px}.content h1{font-size:22px}}
+</style>
+</head>
+<body>
+<header class="header">
+  <a href="/" class="brand">freeimagecompressor.app</a>
+  <div class="header-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <div class="theme-toggle-knob">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </div>
+    </button>
+  </div>
+</header>
+
+<div class="content">
+  <h1>Free PNG Compressor Online</h1>
+
+  <p>PNG files are often much larger than they need to be. A screenshot that looks simple can easily weigh 2–5MB as a PNG, while a photograph saved as PNG might be 10–20MB. freeimagecompressor.app helps you reduce PNG file sizes directly in your browser — with no uploads, no account, and no server processing. Your images stay on your device the entire time.</p>
+
+  <p>An important note upfront: <strong>browser-based PNG compression is limited.</strong> PNG is a lossless format, and the Canvas API's ability to reduce PNG file size without format conversion is modest compared to specialized tools like pngquant or OxiPNG. For the best PNG compression, freeimagecompressor.app's most effective strategy is converting your PNGs to WebP or JPG when the use case allows it.</p>
+
+  <a href="/" class="cta">Compress PNG Images Free →</a>
+
+  <h2>Why are PNG files so large?</h2>
+
+  <p>PNG stands for Portable Network Graphics, and it uses <strong>lossless compression</strong>. This means every single pixel in the image is preserved exactly — no visual information is ever discarded. This is the fundamental reason PNGs are large: preserving all the data requires more storage space.</p>
+
+  <p>Compare this to JPG, which throws away visual data that human eyes are unlikely to notice. A 4000×3000 photograph saved as PNG might be 15MB, while the same image saved as JPG at 80% quality could be 1.5MB — a 10x reduction — with barely any visible difference.</p>
+
+  <p>PNG makes sense for specific use cases: screenshots with crisp text, logos and icons, graphics with transparency, and any image where pixel-perfect accuracy matters. For photographs and complex images with millions of colors, PNG is almost always the wrong format.</p>
+
+  <h2>How does browser-based PNG compression work?</h2>
+
+  <p>When you compress a PNG in freeimagecompressor.app, the browser reads the image, draws it to an HTML5 Canvas, and re-encodes it as PNG using <code>canvas.toBlob('image/png')</code>. The Canvas API's PNG encoder uses the deflate compression algorithm — the same algorithm PNG always uses — but the specific encoding choices (filter selection, compression level) may differ from the original file's encoding.</p>
+
+  <p>This means the re-encoded PNG is sometimes slightly smaller than the original (if the original was not optimally encoded) and sometimes slightly larger. The quality parameter that works well for JPG and WebP has <strong>limited or no effect</strong> on PNG output in most browsers, because PNG compression is lossless by definition — you cannot discard quality to save space.</p>
+
+  <div class="tip-box">
+    <strong>Honest assessment:</strong> For PNG-to-PNG compression, freeimagecompressor.app typically achieves 5–15% size reduction. For dramatically smaller files, convert to WebP (25–35% smaller) or JPG (50–80% smaller, if you don't need transparency).
+  </div>
+
+  <h2>When should you convert PNG to another format?</h2>
+
+  <p><strong>Convert PNG to JPG when:</strong> The image is a photograph or complex illustration with no transparency. JPG files are typically 50–80% smaller than the equivalent PNG. The lossy compression introduces minor artifacts, but at 80% quality these are imperceptible for most images. Use this for blog photos, product images, and background graphics.</p>
+
+  <p><strong>Convert PNG to WebP when:</strong> You want the best compression while optionally preserving transparency. WebP supports both lossy and lossless compression and typically produces files 25–35% smaller than PNG. All modern browsers support WebP. This is often the best choice — smaller than both PNG and JPG, with transparency support.</p>
+
+  <p><strong>Keep PNG when:</strong> You need pixel-perfect accuracy for screenshots with text, logos, icons, or any image where sharp edges and exact colors matter. Keep PNG when transparency is required and WebP is not an option for your audience. Keep PNG for technical diagrams, UI mockups, and anything with crisp lines that JPG would blur.</p>
+
+  <h2>What is the best way to reduce PNG file size?</h2>
+
+  <ul>
+    <li><strong>Convert to WebP.</strong> This is the single most effective approach in freeimagecompressor.app. Select "WebP" as the output format and compress. The file size reduction is usually dramatic, and WebP supports transparency.</li>
+    <li><strong>Resize the image.</strong> A 4000×3000 screenshot resized to 1920×1080 is roughly 75% smaller by pixel count. Enable the resize option in freeimagecompressor.app and set a sensible maximum dimension for your use case.</li>
+    <li><strong>Convert to JPG if transparency is not needed.</strong> For photographs that were incorrectly saved as PNG, converting to JPG at 80% quality gives the most dramatic size reduction.</li>
+    <li><strong>Use specialized PNG tools for best PNG-to-PNG results.</strong> If you must keep the PNG format and want maximum compression, tools like TinyPNG (which uses lossy color reduction via pngquant) or Squoosh (which offers OxiPNG lossless optimization) can achieve better results than browser canvas re-encoding. freeimagecompressor.app's advantage is privacy — your images never leave your device.</li>
+  </ul>
+
+  <h2>How does freeimagecompressor.app handle PNG transparency?</h2>
+
+  <p>When you keep the output format as PNG, the Canvas API preserves the alpha channel (transparency). Your transparent PNGs will remain transparent after compression. However, if you convert a PNG to JPG, transparency is lost — the JPG format does not support alpha channels, and transparent areas will be rendered as white.</p>
+
+  <p>Converting to WebP preserves transparency. This makes WebP an excellent alternative to PNG when you need both small file sizes and transparency support — it gives you the best of both worlds.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>Can PNGs be compressed without losing quality?</summary>
+    <p>Yes, but with limited results. PNG is a lossless format, so lossless compression tools can reduce file size somewhat by optimizing the encoding without discarding any pixel data. However, the gains are typically modest (5-20%). For dramatic size reduction, you need lossy PNG compression (like TinyPNG's pngquant approach) or conversion to JPG/WebP.</p>
+  </details>
+
+  <details>
+    <summary>Should I convert PNG to JPG?</summary>
+    <p>It depends. Convert to JPG if your image is a photograph or does not require transparency — JPG files are typically 50-80% smaller than equivalent PNGs. Keep PNG if you need transparency (logos, icons, overlays) or if the image has sharp text/lines that would suffer from JPG compression artifacts.</p>
+  </details>
+
+  <details>
+    <summary>Why are PNG files so large?</summary>
+    <p>PNG uses lossless compression, which preserves every single pixel exactly as it is. This means no visual quality is lost, but the tradeoff is larger file sizes. A photograph saved as PNG can be 5-10x larger than the same image saved as JPG at 80% quality. PNG is designed for images where exact pixel reproduction matters — screenshots, graphics with text, logos, and images requiring transparency.</p>
+  </details>
+
+  <details>
+    <summary>Does freeimagecompressor.app support PNG transparency?</summary>
+    <p>When you keep the output format as PNG, transparency is preserved through the Canvas API. If you convert a PNG to JPG, transparency is lost because JPG does not support alpha channels — transparent areas will become white. Converting to WebP preserves transparency.</p>
+  </details>
+
+  <details>
+    <summary>What's the best way to reduce PNG file size?</summary>
+    <p>The most effective approach is converting to WebP, which supports both lossy and lossless compression and typically produces files 25-35% smaller than PNG. If you must keep PNG format, try reducing image dimensions with freeimagecompressor.app's resize option. For lossy PNG compression with the best results, server-side tools like TinyPNG use specialized algorithms that outperform browser-based approaches.</p>
+  </details>
+
+  <div class="related">
+    <h2>Related Pages</h2>
+    <div class="related-links">
+      <a href="/compress-jpg-online.html">Compress JPG Online</a>
+      <a href="/image-compressor-for-web.html">Image Compressor for Web</a>
+      <a href="/vs-tinypng.html">vs TinyPNG</a>
+      <a href="/vs-squoosh.html">vs Squoosh</a>
+    </div>
+  </div>
+
+  <div class="attribution">
+    <p>&copy; freeimagecompressor.app · <a href="https://freesuite.app">by freesuite.app</a></p>
+    <div class="more-tools-placeholder" data-suite="freetools"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function initTheme(){var s=localStorage.getItem('suite_theme');if(s==='dark')document.documentElement.classList.add('dark');else if(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.classList.add('dark');updateIcons()}
+  function updateIcons(){var d=document.documentElement.classList.contains('dark');var sun=document.querySelector('.sun-icon');var moon=document.querySelector('.moon-icon');if(sun)sun.style.display=d?'none':'block';if(moon)moon.style.display=d?'block':'none'}
+  document.getElementById('themeToggle').addEventListener('click',function(){document.documentElement.classList.toggle('dark');localStorage.setItem('suite_theme',document.documentElement.classList.contains('dark')?'dark':'light');updateIcons()});
+  initTheme();
+})();
+</script>
+</body>
+</html>

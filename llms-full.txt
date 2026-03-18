@@ -1,0 +1,82 @@
+# freeimagecompressor.app — Full Documentation
+
+> Free online image compressor that runs entirely in the browser.
+
+freeimagecompressor.app is a free, browser-based image compressor that reduces JPG, PNG, WebP, and GIF file sizes with no login, no uploads, and no server processing. All compression happens client-side using the Canvas API. Images never leave the user's device.
+
+## Core Features
+
+- **Batch compression**: Compress up to 20 images at once
+- **Adjustable quality**: Slider from 1% to 100%, default 80%
+- **Format conversion**: Convert between JPG, PNG, and WebP
+- **Resizing**: Optional max dimension with aspect ratio preservation
+- **EXIF stripping**: Metadata removed by default for privacy
+- **Visual comparison**: Side-by-side, slider, and toggle comparison modes
+- **ZIP download**: Download all compressed images as a single ZIP
+- **Per-image quality**: Override quality for individual images
+- **Dark mode**: Toggle with localStorage persistence
+
+## How It Works
+
+1. User drops or selects image files (JPG, PNG, WebP, GIF)
+2. Files are read into browser memory using FileReader
+3. Images are drawn to an off-screen Canvas element
+4. Canvas re-exports the image at the specified quality and format
+5. Compressed blob is stored in memory for preview and download
+6. Images never leave the device — zero network requests for processing
+
+## Supported Formats
+
+- **JPG/JPEG**: Lossy compression with quality parameter (strong effect)
+- **PNG**: Lossless re-encoding (limited compression, canvas quality parameter has minimal effect)
+- **WebP**: Lossy compression with quality parameter (excellent results)
+- **GIF**: Converted to static image (first frame only, animation not preserved)
+
+## Quality Guidelines
+
+- **80%**: Recommended default for web use. 40-70% file size reduction, imperceptible quality loss.
+- **60%**: Good for thumbnails and previews. 70-85% reduction.
+- **90-95%**: High-quality portfolios and archival. 20-40% reduction.
+- **Below 50%**: Maximum compression with visible artifacts.
+
+## Privacy
+
+- All processing happens in the browser via Canvas API
+- Zero server uploads
+- Zero analytics or tracking
+- Zero cookies
+- EXIF metadata (GPS, camera info, timestamps) stripped during re-encoding
+- Image data never saved to localStorage
+- Object URLs revoked when images are removed
+
+## Technology
+
+- Single HTML file with inline CSS and JavaScript
+- No frameworks, no build step, no backend
+- Google Fonts: DM Sans (UI) and Lora (body)
+- JSZip library for ZIP download functionality
+- Service worker for offline support
+- Responsive design with 768px mobile breakpoint
+
+## Comparison with Other Tools
+
+### vs TinyPNG
+- **Privacy**: freeimagecompressor.app is local-only; TinyPNG uploads to servers
+- **Limits**: No limits vs 20 images/month (TinyPNG free web)
+- **PNG quality**: TinyPNG has better PNG compression (pngquant algorithm)
+- **Features**: freeimagecompressor.app has visual comparison, adjustable quality
+
+### vs Squoosh
+- **Batch**: freeimagecompressor.app supports 20 images; Squoosh is single-image
+- **Codecs**: Squoosh supports AVIF, MozJPEG, OxiPNG, WebP2
+- **Simplicity**: freeimagecompressor.app has simpler UI with fewer decisions
+- **Privacy**: Both are browser-based, both private
+
+## Pages
+
+- **Home** (https://freeimagecompressor.app/): Main compressor tool
+- **vs TinyPNG** (https://freeimagecompressor.app/vs-tinypng.html): Comparison with TinyPNG, focusing on privacy and limits
+- **vs Squoosh** (https://freeimagecompressor.app/vs-squoosh.html): Comparison with Squoosh, focusing on batch processing
+- **Compress JPG Online** (https://freeimagecompressor.app/compress-jpg-online.html): Guide to JPG compression, quality settings, and tips
+- **Compress PNG Online** (https://freeimagecompressor.app/compress-png-online.html): Guide to PNG compression, format conversion recommendations
+- **Image Compressor for Web** (https://freeimagecompressor.app/image-compressor-for-web.html): Web optimization guide, recommended dimensions, WordPress workflow
