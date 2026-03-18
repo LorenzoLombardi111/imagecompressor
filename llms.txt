@@ -1,0 +1,26 @@
+# freeimagecompressor.app
+
+> Free online image compressor that runs entirely in the browser.
+
+freeimagecompressor.app is a free, browser-based image compressor that reduces JPG, PNG, WebP, and GIF file sizes with no login, no uploads, and no server processing. All compression happens client-side using the Canvas API.
+
+## Features
+
+- Compress JPG, PNG, WebP, and GIF images
+- Adjustable quality slider (1-100%)
+- Format conversion (JPG, PNG, WebP)
+- Batch compression of up to 20 images
+- Optional resizing with aspect ratio preservation
+- EXIF metadata stripping for privacy
+- Before/after visual comparison
+- ZIP download for batch results
+- Dark mode support
+- Mobile responsive
+
+## Privacy
+
+Images never leave the user's device. Zero server uploads, zero analytics, zero tracking cookies.
+
+## Technology
+
+Single-page static HTML/CSS/JS application. No frameworks, no build step, no backend.

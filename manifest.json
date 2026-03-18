@@ -1,0 +1,11 @@
+{
+  "name": "freeimagecompressor.app",
+  "short_name": "Compress",
+  "description": "Free online image compressor. No upload, no login — compress images in your browser.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f6",
+  "theme_color": "#C49A2A",
+  "categories": ["photography", "utilities"],
+  "icons": []
+}

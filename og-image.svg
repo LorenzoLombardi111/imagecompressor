@@ -1,0 +1,9 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#faf9f6"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#C49A2A"/>
+  <text x="600" y="260" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="48" font-weight="700" fill="#1a1917">freeimagecompressor.app</text>
+  <text x="600" y="330" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="26" font-weight="400" fill="#6b6760">Free Image Compressor — No Upload, No Cloud</text>
+  <text x="600" y="400" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="18" font-weight="400" fill="#9e9b96">Compress JPG, PNG, WebP &amp; GIF entirely in your browser</text>
+  <rect x="440" y="460" width="320" height="48" rx="8" fill="#C49A2A"/>
+  <text x="600" y="491" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="16" font-weight="600" fill="#ffffff">100% Free · 100% Private</text>
+</svg>
