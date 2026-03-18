@@ -7,5 +7,12 @@
   "background_color": "#faf9f6",
   "theme_color": "#C49A2A",
   "categories": ["photography", "utilities"],
-  "icons": []
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
 }

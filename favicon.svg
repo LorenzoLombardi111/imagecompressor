@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square -->
+  <rect width="512" height="512" rx="96" fill="#C49A2A"/>
+
+  <!-- Image frame -->
+  <rect x="96" y="120" width="320" height="260" rx="24" fill="#faf9f6" opacity="0.95"/>
+
+  <!-- Mountain/landscape inside frame -->
+  <polygon points="96,340 200,260 280,310 360,230 416,290 416,356 96,356" fill="#E8DFC8"/>
+  <polygon points="96,340 200,260 280,310 416,340 416,356 96,356" fill="#D4C9A8"/>
+
+  <!-- Sun circle -->
+  <circle cx="320" cy="185" r="32" fill="#C49A2A" opacity="0.6"/>
+
+  <!-- Diagonal compress arrows (bottom-right) -->
+  <g transform="translate(340, 300)">
+    <rect x="0" y="0" width="140" height="140" rx="28" fill="#1a1917" opacity="0.85"/>
+    <!-- Inward arrows showing compression -->
+    <!-- Top-left arrow pointing inward -->
+    <line x1="30" y1="30" x2="60" y2="60" stroke="#faf9f6" stroke-width="10" stroke-linecap="round"/>
+    <polyline points="30,52 30,30 52,30" fill="none" stroke="#faf9f6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Bottom-right arrow pointing inward -->
+    <line x1="110" y1="110" x2="80" y2="80" stroke="#faf9f6" stroke-width="10" stroke-linecap="round"/>
+    <polyline points="110,88 110,110 88,110" fill="none" stroke="#faf9f6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
