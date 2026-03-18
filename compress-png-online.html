@@ -23,47 +23,79 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Can PNGs be compressed without losing quality?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, but with limited results. PNG is a lossless format, so lossless compression tools can reduce file size somewhat by optimizing the encoding without discarding any pixel data. However, the gains are typically modest (5-20%). For dramatic size reduction, you need lossy PNG compression (like TinyPNG's pngquant approach) or conversion to JPG/WebP."
+      "@type": "Article",
+      "headline": "Free PNG Compressor Online — No Upload Required",
+      "description": "Compress PNG images free online. Reduce PNG file size in your browser with no upload. Convert PNG to WebP or JPG for smaller files.",
+      "url": "https://freeimagecompressor.app/compress-png-online.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "freeimagecompressor.app",
+        "url": "https://freeimagecompressor.app/"
       }
     },
     {
-      "@type": "Question",
-      "name": "Should I convert PNG to JPG?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It depends. Convert to JPG if your image is a photograph or does not require transparency — JPG files are typically 50-80% smaller than equivalent PNGs. Keep PNG if you need transparency (logos, icons, overlays) or if the image has sharp text/lines that would suffer from JPG compression artifacts."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freeimagecompressor.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compress PNG Online",
+          "item": "https://freeimagecompressor.app/compress-png-online.html"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Why are PNG files so large?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "PNG uses lossless compression, which preserves every single pixel exactly as it is. This means no visual quality is lost, but the tradeoff is larger file sizes. A photograph saved as PNG can be 5-10x larger than the same image saved as JPG at 80% quality. PNG is designed for images where exact pixel reproduction matters — screenshots, graphics with text, logos, and images requiring transparency."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does freeimagecompressor.app support PNG transparency?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "When you keep the output format as PNG, transparency is preserved through the Canvas API. If you convert a PNG to JPG, transparency is lost because JPG does not support alpha channels — transparent areas will become white. Converting to WebP preserves transparency."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the best way to reduce PNG file size?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The most effective approach is converting to WebP, which supports both lossy and lossless compression and typically produces files 25-35% smaller than PNG. If you must keep PNG format, try reducing image dimensions with freeimagecompressor.app's resize option. For lossy PNG compression with the best results, server-side tools like TinyPNG use specialized algorithms that outperform browser-based approaches."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can PNGs be compressed without losing quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but with limited results. PNG is a lossless format, so lossless compression tools can reduce file size somewhat by optimizing the encoding without discarding any pixel data. However, the gains are typically modest (5-20%). For dramatic size reduction, you need lossy PNG compression (like TinyPNG's pngquant approach) or conversion to JPG/WebP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I convert PNG to JPG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends. Convert to JPG if your image is a photograph or does not require transparency — JPG files are typically 50-80% smaller than equivalent PNGs. Keep PNG if you need transparency (logos, icons, overlays) or if the image has sharp text/lines that would suffer from JPG compression artifacts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are PNG files so large?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PNG uses lossless compression, which preserves every single pixel exactly as it is. This means no visual quality is lost, but the tradeoff is larger file sizes. A photograph saved as PNG can be 5-10x larger than the same image saved as JPG at 80% quality. PNG is designed for images where exact pixel reproduction matters — screenshots, graphics with text, logos, and images requiring transparency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does freeimagecompressor.app support PNG transparency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you keep the output format as PNG, transparency is preserved through the Canvas API. If you convert a PNG to JPG, transparency is lost because JPG does not support alpha channels — transparent areas will become white. Converting to WebP preserves transparency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the best way to reduce PNG file size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most effective approach is converting to WebP, which supports both lossy and lossless compression and typically produces files 25-35% smaller than PNG. If you must keep PNG format, try reducing image dimensions with freeimagecompressor.app's resize option. For lossy PNG compression with the best results, server-side tools like TinyPNG use specialized algorithms that outperform browser-based approaches."
+          }
+        }
+      ]
     }
   ]
 }

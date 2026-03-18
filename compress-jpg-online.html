@@ -23,47 +23,79 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "What quality should I use for JPG compression?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For most web use, 80% quality is the sweet spot — it reduces file size by 40-70% with virtually no visible quality loss. Use 60% for thumbnails and previews where smaller size matters more than detail. Use 90-95% for high-quality archival or photography portfolios where every detail counts."
+      "@type": "Article",
+      "headline": "Free JPG Compressor Online — No Upload Required",
+      "description": "Compress JPG images free online. Adjustable quality, batch support, no upload to any server. Reduce JPG file size in your browser.",
+      "url": "https://freeimagecompressor.app/compress-jpg-online.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "freeimagecompressor.app",
+        "url": "https://freeimagecompressor.app/"
       }
     },
     {
-      "@type": "Question",
-      "name": "Does JPG compression lose quality?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, JPG is a lossy format. Every time you compress a JPG, some image data is permanently discarded. However, at quality levels above 75%, the loss is typically imperceptible to the human eye. The key is to compress from the original source image, not from an already-compressed JPG, to avoid generational quality loss."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freeimagecompressor.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compress JPG Online",
+          "item": "https://freeimagecompressor.app/compress-jpg-online.html"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "How much can I reduce a JPG file?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A typical JPG photograph can be reduced by 40-80% depending on the quality setting. A 5MB photo at 80% quality often compresses to 1-2MB. At 60% quality, that same photo might drop to 500KB-1MB. Results vary based on image content — photos with large areas of similar color compress better than highly detailed images."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is 80% quality good enough for web?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. 80% quality is widely considered the standard for web images. Google's own guidelines suggest that quality levels between 75-85% provide the best balance of file size and visual quality for web delivery. Most users cannot distinguish between an 80% and 100% quality JPG on screen."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I compress JPG without losing quality?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Not with standard JPG compression — JPG is inherently lossy. However, you can minimize visible quality loss by using higher quality settings (85-95%). If you need truly lossless compression, consider PNG or lossless WebP formats instead. For most practical purposes, JPG at 80% quality looks identical to the original."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What quality should I use for JPG compression?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most web use, 80% quality is the sweet spot — it reduces file size by 40-70% with virtually no visible quality loss. Use 60% for thumbnails and previews where smaller size matters more than detail. Use 90-95% for high-quality archival or photography portfolios where every detail counts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does JPG compression lose quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, JPG is a lossy format. Every time you compress a JPG, some image data is permanently discarded. However, at quality levels above 75%, the loss is typically imperceptible to the human eye. The key is to compress from the original source image, not from an already-compressed JPG, to avoid generational quality loss."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I reduce a JPG file?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A typical JPG photograph can be reduced by 40-80% depending on the quality setting. A 5MB photo at 80% quality often compresses to 1-2MB. At 60% quality, that same photo might drop to 500KB-1MB. Results vary based on image content — photos with large areas of similar color compress better than highly detailed images."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 80% quality good enough for web?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. 80% quality is widely considered the standard for web images. Google's own guidelines suggest that quality levels between 75-85% provide the best balance of file size and visual quality for web delivery. Most users cannot distinguish between an 80% and 100% quality JPG on screen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compress JPG without losing quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not with standard JPG compression — JPG is inherently lossy. However, you can minimize visible quality loss by using higher quality settings (85-95%). If you need truly lossless compression, consider PNG or lossless WebP formats instead. For most practical purposes, JPG at 80% quality looks identical to the original."
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,9 +1,14 @@
-const CACHE_NAME = 'imgcompress-v1';
+const CACHE_NAME = 'imgcompress-v2';
 const ASSETS = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/og-image.svg'
+  '/og-image.svg',
+  '/vs-tinypng.html',
+  '/vs-squoosh.html',
+  '/compress-jpg-online.html',
+  '/compress-png-online.html',
+  '/image-compressor-for-web.html'
 ];
 
 self.addEventListener('install', (event) => {

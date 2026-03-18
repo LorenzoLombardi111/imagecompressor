@@ -23,47 +23,79 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "What image format is best for websites?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "WebP is the best general-purpose format for websites in 2024. It produces files 25-35% smaller than JPG and PNG at equivalent quality, supports transparency, and works in all modern browsers. Use JPG for photographs when WebP is not an option, and PNG only when you need pixel-perfect graphics or transparency without WebP support."
+      "@type": "Article",
+      "headline": "Free Image Compressor for Websites & Blogs",
+      "description": "Optimize images for websites and blogs. Reduce image size for faster page loads, better SEO, and improved Core Web Vitals. Free, no upload.",
+      "url": "https://freeimagecompressor.app/image-compressor-for-web.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "freeimagecompressor.app",
+        "url": "https://freeimagecompressor.app/"
       }
     },
     {
-      "@type": "Question",
-      "name": "How do I optimize images for WordPress?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Before uploading to WordPress, compress images with freeimagecompressor.app: set quality to 80%, convert to WebP if your theme supports it, and resize to a maximum width of 1920px for full-width images or 800px for content images. This pre-upload optimization avoids the need for server-side plugins and works with any hosting plan."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freeimagecompressor.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Image Compressor for Web",
+          "item": "https://freeimagecompressor.app/image-compressor-for-web.html"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "What size should website images be?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For hero/banner images: 1920px wide maximum. For content/blog images: 800-1200px wide. For thumbnails: 300-400px wide. Always match the image dimensions to the largest size it will be displayed at — serving a 4000px image in an 800px container wastes bandwidth. Use freeimagecompressor.app's resize option to cap dimensions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does image compression affect SEO?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, positively. Google uses page speed as a ranking factor, and images are typically the largest assets on a page. Compressing images improves Largest Contentful Paint (LCP), one of the three Core Web Vitals that Google measures. Faster-loading pages rank better, get lower bounce rates, and provide a better user experience."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I compress images in bulk for my website?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. freeimagecompressor.app supports batch compression of up to 20 images at once. Drop all your blog images, set quality to 80% and format to WebP, click Compress All, and download the results as a ZIP. This is ideal for preparing a batch of images before uploading to your CMS."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What image format is best for websites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WebP is the best general-purpose format for websites in 2024. It produces files 25-35% smaller than JPG and PNG at equivalent quality, supports transparency, and works in all modern browsers. Use JPG for photographs when WebP is not an option, and PNG only when you need pixel-perfect graphics or transparency without WebP support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I optimize images for WordPress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Before uploading to WordPress, compress images with freeimagecompressor.app: set quality to 80%, convert to WebP if your theme supports it, and resize to a maximum width of 1920px for full-width images or 800px for content images. This pre-upload optimization avoids the need for server-side plugins and works with any hosting plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What size should website images be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For hero/banner images: 1920px wide maximum. For content/blog images: 800-1200px wide. For thumbnails: 300-400px wide. Always match the image dimensions to the largest size it will be displayed at — serving a 4000px image in an 800px container wastes bandwidth. Use freeimagecompressor.app's resize option to cap dimensions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does image compression affect SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, positively. Google uses page speed as a ranking factor, and images are typically the largest assets on a page. Compressing images improves Largest Contentful Paint (LCP), one of the three Core Web Vitals that Google measures. Faster-loading pages rank better, get lower bounce rates, and provide a better user experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compress images in bulk for my website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. freeimagecompressor.app supports batch compression of up to 20 images at once. Drop all your blog images, set quality to 80% and format to WebP, click Compress All, and download the results as a ZIP. This is ideal for preparing a batch of images before uploading to your CMS."
+          }
+        }
+      ]
     }
   ]
 }

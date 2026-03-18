@@ -23,39 +23,71 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Is freeimagecompressor.app better than Squoosh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It depends on your needs. Squoosh offers more advanced codec options (AVIF, MozJPEG, OxiPNG) and fine-grained settings, making it technically superior for single-image optimization. freeimagecompressor.app is better for batch workflows — it supports up to 20 images at once, offers ZIP download, and has a simpler interface. Both process images locally in the browser."
+      "@type": "Article",
+      "headline": "freeimagecompressor.app vs Squoosh: Free Alternative",
+      "description": "Compare freeimagecompressor.app vs Squoosh. Batch compression, ZIP download, simpler UI. Both are private and browser-based.",
+      "url": "https://freeimagecompressor.app/vs-squoosh.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "freeimagecompressor.app",
+        "url": "https://freeimagecompressor.app/"
       }
     },
     {
-      "@type": "Question",
-      "name": "Can Squoosh compress multiple images?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Squoosh processes one image at a time. If you need to compress multiple images, you must load, adjust, and download each one individually. freeimagecompressor.app supports batch compression of up to 20 images at once with a single click, plus ZIP download of all results."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freeimagecompressor.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "vs Squoosh",
+          "item": "https://freeimagecompressor.app/vs-squoosh.html"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Does freeimagecompressor.app support AVIF?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. freeimagecompressor.app supports JPG, PNG, WebP, and GIF formats. Squoosh supports additional formats including AVIF, WebP2, and specialized codecs like MozJPEG and OxiPNG. If you need AVIF output, Squoosh is the better choice."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which is simpler to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "freeimagecompressor.app is simpler. It has one quality slider, a format selector, and a Compress All button. Squoosh exposes many advanced settings including effort levels, color space options, and codec-specific parameters. For quick batch compression, freeimagecompressor.app requires fewer decisions."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is freeimagecompressor.app better than Squoosh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your needs. Squoosh offers more advanced codec options (AVIF, MozJPEG, OxiPNG) and fine-grained settings, making it technically superior for single-image optimization. freeimagecompressor.app is better for batch workflows — it supports up to 20 images at once, offers ZIP download, and has a simpler interface. Both process images locally in the browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Squoosh compress multiple images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Squoosh processes one image at a time. If you need to compress multiple images, you must load, adjust, and download each one individually. freeimagecompressor.app supports batch compression of up to 20 images at once with a single click, plus ZIP download of all results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does freeimagecompressor.app support AVIF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. freeimagecompressor.app supports JPG, PNG, WebP, and GIF formats. Squoosh supports additional formats including AVIF, WebP2, and specialized codecs like MozJPEG and OxiPNG. If you need AVIF output, Squoosh is the better choice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is simpler to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "freeimagecompressor.app is simpler. It has one quality slider, a format selector, and a Compress All button. Squoosh exposes many advanced settings including effort levels, color space options, and codec-specific parameters. For quick batch compression, freeimagecompressor.app requires fewer decisions."
+          }
+        }
+      ]
     }
   ]
 }
@@ -105,7 +137,7 @@ details p{padding:12px 16px;margin:0;font-size:14px}
 .related-links a{display:inline-block;padding:6px 12px;border:1px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:all 0.15s ease}
 .related-links a:hover{border-color:var(--accent);color:var(--accent)}
 .attribution{font-family:'DM Sans',sans-serif;font-size:11px;color:var(--text-muted);text-align:center;padding:24px;margin-top:48px;border-top:1px solid var(--border)}
-@media(max-width:768px){.content{padding:32px 16px 48px}.content h1{font-size:22px}.comparison-table{font-size:12px}.comparison-table th,.comparison-table td{padding:8px 10px}}
+@media(max-width:768px){.content{padding:32px 16px 48px}.content h1{font-size:22px}.comparison-table{font-size:12px;display:block;overflow-x:auto}.comparison-table th,.comparison-table td{padding:8px 10px}}
 </style>
 </head>
 <body>

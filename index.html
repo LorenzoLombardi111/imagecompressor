@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){var t=localStorage.getItem('suite_theme');if(t==='dark'||((!t)&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')})()</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -146,7 +147,7 @@ html.dark .theme-toggle-knob svg{color:var(--accent)}
 .btn-secondary:hover:not(:disabled){background:var(--surface)}
 .btn-destructive{background:transparent;border:1px solid var(--destructive);color:var(--destructive);padding:8px 16px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500}
 .btn-destructive:hover:not(:disabled){background:var(--surface)}
-.btn-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--text-muted)}
+.btn-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--text-muted)}
 .btn-icon:hover{background:var(--surface);color:var(--text-secondary)}
 
 /* Main layout */
@@ -175,9 +176,9 @@ html.dark .theme-toggle-knob svg{color:var(--accent)}
 
 /* Range slider */
 input[type="range"]{-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--border);outline:none;cursor:pointer}
-input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);cursor:pointer;transition:transform 0.15s ease}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);cursor:pointer;transition:transform 0.15s ease}
 input[type="range"]::-webkit-slider-thumb:hover{transform:scale(1.1)}
-input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);cursor:pointer}
+input[type="range"]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);cursor:pointer}
 input[type="range"]::-moz-range-track{height:4px;border-radius:2px;background:var(--border)}
 
 /* Segmented control */
@@ -187,9 +188,9 @@ input[type="range"]::-moz-range-track{height:4px;border-radius:2px;background:va
 .segmented button.active{background:var(--accent);color:var(--accent-text)}
 
 /* Toggle switch */
-.toggle{width:40px;height:22px;border-radius:11px;background:var(--border);position:relative;cursor:pointer;transition:background 0.15s ease;flex-shrink:0}
+.toggle{width:44px;height:26px;border-radius:13px;background:var(--border);position:relative;cursor:pointer;transition:background 0.15s ease;flex-shrink:0}
 .toggle.on{background:var(--accent)}
-.toggle-knob{width:18px;height:18px;border-radius:50%;background:var(--bg);position:absolute;top:2px;left:2px;transition:transform 0.15s ease}
+.toggle-knob{width:20px;height:20px;border-radius:50%;background:var(--bg);position:absolute;top:3px;left:3px;transition:transform 0.15s ease}
 .toggle.on .toggle-knob{transform:translateX(18px);background:var(--accent-text)}
 
 /* Action buttons row */
@@ -347,7 +348,7 @@ html.dark .savings-badge{background:rgba(46,204,113,0.1)}
 <div class="main">
   <div class="main-content" id="mainContent">
     <!-- Empty state -->
-    <div class="drop-zone" id="dropZone">
+    <div class="drop-zone" id="dropZone" role="button" tabindex="0" aria-label="Drop images here or click to browse">
       <div class="drop-zone-icon">
         <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="12" width="48" height="40" rx="4"/><circle cx="24" cy="28" r="6"/><polyline points="8,44 24,32 36,42 44,36 56,46"/><line x1="32" y1="2" x2="32" y2="14"/><polyline points="26,8 32,2 38,8"/></svg>
       </div>
@@ -364,7 +365,7 @@ html.dark .savings-badge{background:rgba(46,204,113,0.1)}
           <div class="settings-collapsible" id="settingsCollapsible">
             <div class="setting-group">
               <label class="setting-label">Quality</label>
-              <input type="range" id="globalQuality" min="1" max="100" value="80" style="width:120px">
+              <input type="range" id="globalQuality" min="1" max="100" value="80" style="width:120px" aria-label="Compression quality" aria-valuemin="1" aria-valuemax="100" aria-valuenow="80">
               <span class="quality-display" id="globalQualityDisplay">80</span>
             </div>
             <div class="setting-group">
@@ -378,7 +379,7 @@ html.dark .savings-badge{background:rgba(46,204,113,0.1)}
             </div>
             <div class="setting-group">
               <label class="setting-label">Resize</label>
-              <div class="toggle" id="resizeToggle"><div class="toggle-knob"></div></div>
+              <div class="toggle" id="resizeToggle" role="switch" aria-checked="false" aria-label="Enable resize"><div class="toggle-knob"></div></div>
               <div class="resize-input" id="resizeInput" style="display:none">
                 <label class="setting-label">Max</label>
                 <input type="number" id="maxDimension" value="1920" min="1" max="10000" placeholder="1920"> <span class="setting-label">px</span>
@@ -386,7 +387,7 @@ html.dark .savings-badge{background:rgba(46,204,113,0.1)}
             </div>
             <div class="setting-group">
               <label class="setting-label">Strip metadata</label>
-              <div class="toggle on" id="metadataToggle"><div class="toggle-knob"></div></div>
+              <div class="toggle on" id="metadataToggle" role="switch" aria-checked="true" aria-label="Strip metadata"><div class="toggle-knob"></div></div>
             </div>
           </div>
           <div class="actions-row">
@@ -446,7 +447,7 @@ html.dark .savings-badge{background:rgba(46,204,113,0.1)}
 </div>
 
 <!-- Toast container -->
-<div class="toast-container" id="toastContainer"></div>
+<div class="toast-container" id="toastContainer" role="status" aria-live="polite"></div>
 
 <!-- SEO Content -->
 <section class="seo-content">
@@ -933,6 +934,11 @@ We'll load it from CDN as a fallback since inlining the full 25KB is impractical
     if (entry.status === 'compressing') {
       const prog = document.createElement('div');
       prog.className = 'image-card-progress';
+      prog.setAttribute('role', 'progressbar');
+      prog.setAttribute('aria-valuenow', '50');
+      prog.setAttribute('aria-valuemin', '0');
+      prog.setAttribute('aria-valuemax', '100');
+      prog.setAttribute('aria-label', 'Compression progress');
       prog.innerHTML = '<div class="image-card-progress-fill" style="width:50%"></div>';
       card.appendChild(prog);
     }
@@ -1110,6 +1116,7 @@ We'll load it from CDN as a fallback since inlining the full 25KB is impractical
       const line = document.createElement('div');
       line.className = 'slider-line';
       line.style.left = '50%';
+      line.setAttribute('aria-label', 'Image comparison slider');
       const handle = document.createElement('div');
       handle.className = 'slider-handle';
       handle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"/><polyline points="9,18 15,12 9,6" transform="translate(6,0)"/></svg>';
@@ -1304,6 +1311,7 @@ We'll load it from CDN as a fallback since inlining the full 25KB is impractical
   // Quality
   globalQuality.addEventListener('input', () => {
     state.quality = parseInt(globalQuality.value);
+    globalQuality.setAttribute('aria-valuenow', state.quality);
     globalQualityDisplay.textContent = state.quality;
     // Update all images that haven't been individually overridden
     state.images.forEach(e => { e.quality = state.quality; });
@@ -1324,6 +1332,7 @@ We'll load it from CDN as a fallback since inlining the full 25KB is impractical
   resizeToggle.addEventListener('click', () => {
     state.resize = !state.resize;
     resizeToggle.classList.toggle('on', state.resize);
+    resizeToggle.setAttribute('aria-checked', state.resize);
     resizeInput.style.display = state.resize ? 'flex' : 'none';
   });
   maxDimension.addEventListener('change', () => {
@@ -1334,6 +1343,7 @@ We'll load it from CDN as a fallback since inlining the full 25KB is impractical
   metadataToggle.addEventListener('click', () => {
     state.stripMetadata = !state.stripMetadata;
     metadataToggle.classList.toggle('on', state.stripMetadata);
+    metadataToggle.setAttribute('aria-checked', state.stripMetadata);
   });
 
   // Compress

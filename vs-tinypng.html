@@ -23,39 +23,71 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Is freeimagecompressor.app more private than TinyPNG?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. freeimagecompressor.app processes images entirely in your browser using the Canvas API. Your images never leave your device. TinyPNG uploads your images to their servers for processing, which means your files pass through third-party infrastructure."
+      "@type": "Article",
+      "headline": "freeimagecompressor.app vs TinyPNG: Free Private Alternative",
+      "description": "Compare freeimagecompressor.app vs TinyPNG. Free private image compression with no uploads, no limits, and no account.",
+      "url": "https://freeimagecompressor.app/vs-tinypng.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "freeimagecompressor.app",
+        "url": "https://freeimagecompressor.app/"
       }
     },
     {
-      "@type": "Question",
-      "name": "Does TinyPNG upload my images?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. TinyPNG's compression happens on their servers. When you use TinyPNG, your images are uploaded to their infrastructure, processed there, and then sent back to you. TinyPNG states they delete images after a period, but the upload still occurs."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freeimagecompressor.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "vs TinyPNG",
+          "item": "https://freeimagecompressor.app/vs-tinypng.html"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Which compresses PNGs better?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "TinyPNG generally produces better PNG compression. Their proprietary lossy PNG algorithm (based on pngquant) can dramatically reduce PNG file sizes while maintaining good visual quality. freeimagecompressor.app uses browser canvas re-encoding, which offers more limited PNG compression. For maximum PNG compression, TinyPNG is the better choice. For privacy, freeimagecompressor.app wins."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does freeimagecompressor.app have usage limits?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. freeimagecompressor.app has no usage limits at all. You can compress as many images as you want, as many times as you want, with no daily or monthly caps. TinyPNG's free web version limits you to 20 images per month, and their free API tier allows 500 compressions per month."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is freeimagecompressor.app more private than TinyPNG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. freeimagecompressor.app processes images entirely in your browser using the Canvas API. Your images never leave your device. TinyPNG uploads your images to their servers for processing, which means your files pass through third-party infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TinyPNG upload my images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. TinyPNG's compression happens on their servers. When you use TinyPNG, your images are uploaded to their infrastructure, processed there, and then sent back to you. TinyPNG states they delete images after a period, but the upload still occurs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which compresses PNGs better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TinyPNG generally produces better PNG compression. Their proprietary lossy PNG algorithm (based on pngquant) can dramatically reduce PNG file sizes while maintaining good visual quality. freeimagecompressor.app uses browser canvas re-encoding, which offers more limited PNG compression. For maximum PNG compression, TinyPNG is the better choice. For privacy, freeimagecompressor.app wins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does freeimagecompressor.app have usage limits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. freeimagecompressor.app has no usage limits at all. You can compress as many images as you want, as many times as you want, with no daily or monthly caps. TinyPNG's free web version limits you to 20 images per month, and their free API tier allows 500 compressions per month."
+          }
+        }
+      ]
     }
   ]
 }
@@ -119,6 +151,7 @@ details p{padding:12px 16px;margin:0;font-size:14px}
   .content h1{font-size:22px}
   .comparison-table{font-size:12px}
   .comparison-table th,.comparison-table td{padding:8px 10px}
+  .comparison-table{display:block;overflow-x:auto}
 }
 </style>
 </head>
